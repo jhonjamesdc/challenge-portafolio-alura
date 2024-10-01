@@ -1,171 +1,377 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuente del Proyecto Raleway -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <title>Mi Portafolio</title>
-</head>
-
-<body>
-    <!-- Menú -->
-    <header class="cabecera">
-        <img class="cabecera__logo" src="assets/vector.png" alt="Logo">
-        <h1 class="cabecera__titulo">Alura Latam</h1>
-        <nav class="navegacion">
-            <ul class="navegacion__lista">
-                <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
-                <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
-                <li class="navegacion__elemento"><a href="#aficiones">Aficiones</a></li>
-                <li class="navegacion__elemento"><a href="#formacion">Formación</a></li>
-                <li class="navegacion__elemento"><a href="#proyectos">Proyectos</a></li>
-                <li class="navegacion__elemento"><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JJDC - Portafolio</title>
+    <!-- ESTILO BASE CON RESET.CSS -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ICONSCOUT -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./assets/css/header/header.css" />
+    <link rel="stylesheet" href="./assets/css/banner/banner.css" />
+    <link rel="stylesheet" href="./assets/css/sobre-mi/sobre-mi.css" />
+    <link rel="stylesheet" href="./assets/css/skills/skills.css" />
+    <link rel="stylesheet" href="./assets/css/hobbies/hobbies.css" />
+    <link rel="stylesheet" href="./assets/css/formaciones/formaciones.css" />
+    <link rel="stylesheet" href="./assets/css/portfolio/portfolio.css" />
+    <link rel="stylesheet" href="./assets/css/formulario/formulario.css" />
+    <link rel="stylesheet" href="./assets/css/footer/footer.css" />
+  </head>
+  <body>
+    <!-- HEADER CON NAVEGACIÓN -->
+    <header class="header container">
+      <img class="header__logo" src="./assets/img/logo.ico" alt="" />
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#sobre-mi">Sobre mi</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#skills">Skills</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#hobbies">Hobbies</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#formacion">Formación</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#experiencia">Proyectos</a>
+          </li>
+          <li class="menu__item menu__item--contacto">
+            <a class="menu__link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+        <button class="menu__open"><i class="uil uil-bars"></i></button>
+        <button class="menu__close"><i class="uil uil-multiply"></i></button>
+      </nav>
     </header>
 
-    <!-- Sección de Presentación -->
-    <section class="presentacion">
-        <img class="presentacion__foto" src="assets/profile.png" alt="Foto de perfil">
-        <div class="presentacion__contenedor">
-            <h2 class="presentacion__titulo">Hola, mi nombre es Alura Latam y construyo páginas web</h2>
-            <p class="presentacion__subtitulo">Soy formada en... lorem ipsum sit amet consectetur y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
-            <ul class="redes">
-                <li class="redes__img"><a href="">Github <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Linkedin <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Instagram <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Currículo <img src="assets/arrow.png" alt="Flecha"></a></li>
-            </ul>
+    <main>
+      <!-- BANNER -->
+      <section class="banner container">
+        <div class="banner__img"></div>
+        <div class="hero">
+          <img
+            src="./assets/img/it'sme.jpg"
+            alt="Foto de perfil"
+            class="hero__img__profile"
+          />
+          <div class="hero__text">
+            <h1 class="hero__text__title">
+              Hola, mi nombre es Jhon James Diaz Cardona, Ingeniero Topográfico
+              y futuro desarrollador FrontEnd
+            </h1>
+            <p class="hero__text__paragraph">
+              Soy de Cali, Valle del Cauca, Colombia. Soy egresado como
+              Ingeniero Topográfico de la Universidad del Valle y actualmente me
+              encuentro en el programa Desarrollo FrontEnd de Alura LATAM con
+              asociación Oracle Next Education
+            </p>
+          </div>
         </div>
-    </section>
-
-    <!-- Sección sobre mí -->
-    <section class="sobre-mi" id="sobre-mi">
-        <h2 class="sobre-mi__titulo">Sobre mí</h2>
-        <p class="sobre-mi__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.</p>
-        <p class="sobre-mi__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-        <!-- Firma opcional -->
-        <img class="sobre-mi__firma" src="assets/signature.png" alt="Firma">
-    </section>
-
-    <!-- Sección de Habilidades -->
-    <section class="habilidades" id="habilidades">
-        <h2 class="habilidades__titulo">Habilidades</h2>
-        <ul class="habilidades__lista">
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/html.png" alt="HTML">
-                <p class="habilidades__nombre">HTML 5</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/js_icon.png" alt="JavaScript">
-                <p class="habilidades__nombre">JavaScript</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/php_icon.png" alt="PHP">
-                <p class="habilidades__nombre">PHP</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/nodejs_icon.png" alt="Node.js">
-                <p class="habilidades__nombre">Node.js</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/react_icon.png" alt="React">
-                <p class="habilidades__nombre">React</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/css_icon.png" alt="CSS">
-                <p class="habilidades__nombre">CSS</p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Sección de Aficiones -->
-    <section class="aficiones" id="aficiones">
-        <h2 class="aficiones__titulo">Aficiones</h2>
-        <ul class="aficiones__lista">
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/skate_icon.png" alt="Patinaje">
-                <p class="aficiones__nombre">Patinaje</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/guitar_icon.png" alt="Tocar bajo">
-                <p class="aficiones__nombre">Tocar bajo</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/headphones_icon.png" alt="Oír música">
-                <p class="aficiones__nombre">Oír música</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/tv_icon.png" alt="Ver series">
-                <p class="aficiones__nombre">Ver series</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/forkspoon_icon.png" alt="Cocinar">
-                <p class="aficiones__nombre">Cocinar</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/camera_icon.png" alt="Tomar fotos">
-                <p class="aficiones__nombre">Tomar fotos</p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Sección de Formación académica -->
-    <section class="formacion" id="formacion">
-        <h2 class="formacion__titulo">Formación académica</h2>
-        <ul class="formacion__lista">
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/ufpr_logo.png" alt="UFPR">
-                <div>
-                    <h3 class="formacion__nombre">Análisis de datos</h3>
-                    <p class="formacion__detalle">2018 - UFPR</p>
-                </div>
-            </li>
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/alura_logo.png" alt="Alura">
-                <div>
-                    <h3 class="formacion__nombre">Formación en UX Design</h3>
-                    <p class="formacion__detalle">2019 - Alura</p>
-                </div>
-            </li>
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/ufrj_logo.png" alt="UFRJ">
-                <div>
-                    <h3 class="formacion__nombre">Posgrado en diseño</h3>
-                    <p class="formacion__detalle">En curso - UFRJ</p>
-                </div>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Sección de Proyectos -->
-    <section class="proyectos" id="proyectos">
-        <h2 class="proyectos__titulo">Experiencia Profesional</h2>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
-            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+      </section>
+      <!-- SOBRE MÍ -->
+      <section class="sobre-mi container" id="sobre-mi">
+        <h1 class="sobre-mi__title">Sobre mi</h1>
+        <p class="sobre-mi__text">
+          Cuando era joven, recién graduado del bachillerato, quería ser
+          Ingeniero Civil, pero la oportunidad cada vez la veía más lejana,
+          hasta que ingresé en la Ingeniería Topográfica y me enamoré de la
+          carrera. Me enamoré de todas las inclinaciones que podía elegir para
+          enfocar mi profesión. Así fue como llegué al mundo de la programación,
+          donde mi trabajo de grado se basó en un aplicativo móvil para la
+          gestión de los residuos sólidos en la ciudad de Cali, Colombia.
+        </p>
+      </section>
+      <!-- SKILLS -->
+      <section class="skills container" id="skills">
+        <h1 class="skills__title">Skills</h1>
+        <div class="skills__card">
+          <div class="skill">
+            <img
+              src="./assets/img/logos/postgresql.svg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">PostgreSQL</h4>
+          </div>
+          <div class="skill">
+            <img
+              src="./assets/img/logos/postgis.jpeg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">PostGIS</h4>
+          </div>
+          <div class="skill">
+            <img
+              src="./assets/img/logos/icons8-html-5.svg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">HTML5</h4>
+          </div>
+          <div class="skill">
+            <img
+              src="./assets/img/logos/java-script.svg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">JavaScript</h4>
+          </div>
+          <div class="skill">
+            <img
+              src="./assets/img/logos/icons8-css3.svg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">CSS</h4>
+          </div>
+          <div class="skill">
+            <img
+              src="./assets/img/logos/icons8-bootstrap.svg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">Bootstrap</h4>
+          </div>
+          <div class="skill">
+            <img
+              src="./assets/img/logos/icons8-git.svg"
+              alt=""
+              class="skill__img"
+            />
+            <h4 class="skill__text">Git</h4>
+          </div>
         </div>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
-            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+      </section>
+      <!-- HOBBIES -->
+      <section class="hobbies container" id="hobbies">
+        <h1 class="hobbies__title">Hobbies</h1>
+        <div class="hobbies__card">
+          <div class="hobbie">
+            <img
+              src="./assets/img/hobbies/games.png"
+              alt=""
+              class="hobbie__img"
+            />
+            <h4 class="hobbie__text">Videojuegos</h4>
+          </div>
+          <div class="hobbie">
+            <img
+              src="./assets/img/hobbies/crossfit.png"
+              alt=""
+              class="hobbie__img"
+            />
+            <h4 class="hobbie__text">Hacer ejercicio</h4>
+          </div>
+          <div class="hobbie">
+            <img
+              src="./assets/img/hobbies/music.png"
+              alt=""
+              class="hobbie__img"
+            />
+            <h4 class="hobbie__text">Escuchar música</h4>
+          </div>
+          <div class="hobbie">
+            <img
+              src="./assets/img/hobbies/series.png"
+              alt=""
+              class="hobbie__img"
+            />
+            <h4 class="hobbie__text">Ver series</h4>
+          </div>
         </div>
-    </section>
+      </section>
+      <!-- FORMACIONES -->
+      <section class="formaciones" id="formacion">
+        <h1 class="formaciones__title">Formación Académica</h1>
+        <div class="formacion__cards">
+          <div class="formacion__card">
+            <img
+              src="./assets/img/logos/logovalle.png"
+              alt=""
+              class="formacion__img"
+            />
+            <h2 class="formacion__title">Ingeniería Topográfica</h2>
+          </div>
+          <div class="formacion__card">
+            <img
+              src="./assets/img/logos/alura-latam-logo.jpg"
+              alt=""
+              class="formacion__img"
+            />
+            <h2 class="formacion__title">Desarrollador FrontEnd</h2>
+            <p class="formacion__text">En curso - Alura Latam</p>
+          </div>
+          <div class="formacion__card">
+            <img
+              src="./assets/img/logos/sena.png"
+              alt=""
+              class="formacion__img"
+            />
+            <h2 class="formacion__title">
+              Tecnico en Construcción de Edificaciones
+            </h2>
+          </div>
+        </div>
+      </section>
+      <!-- EXPERIENCIA EN PROGRAMACIÓN -->
+      <section id="experiencia" class="portfolios container">
+        <h1 class="portfolios__title">Experiencia en Programación</h1>
+        <div class="portfolios__projects">
+          <article class="portfolio__project">
+            <span class="portfolio__project__img">
+              <img src="./assets/img/proyectos/encriptador.png" alt="" />
+            </span>
+            <div class="portfolio__description">
+              <h2 class="portfolio__description__title">Encriptador</h2>
+              <p class="portfolio__description__text">Challenge Alura Oracle</p>
+              <div class="portfolio__description__btn">
+                <a
+                  href="https://github.com/jhonjamesdc/challenge-alura-textencripted"
+                  class="btn"
+                  target="_blank"
+                  >GitHub</a
+                >
+                <a
+                  href="https://jhonjamesdc.github.io/challenge-alura-textencripted/"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >Demo</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- FORMUALRIO DE CONTACTO -->
+      <section id="contacto" class="contacto container">
+        <div class="contacto__text">
+          <h1 class="contacto__text__title">Contacto</h1>
+          <p class="contacto__text__paragraph">¿Quieres contactarme?</p>
+          <p class="contacto__text__paragraph">
+            Complete el siguiente formulario y me pondré en contacto con usted
+            lo más rápido posible
+          </p>
+        </div>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto" id="contacto">
-        <h2 class="contacto__titulo">Contacto</h2>
-        <form class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-            <button class="contacto__boton" type="submit">Enviar</button>
+        <form
+          action="https://formspree.io/f/moqzwrvg"
+          method="POST"
+          class="form"
+        >
+          <fieldset>
+            <div class="input-container">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nombre"
+                class="input"
+                data-tipo="nombre"
+                pattern="^.{1,50}$"
+                required
+              />
+              <label class="input-label" for="name">Nombre</label>
+              <span class="input-message-error"></span>
+            </div>
+            <div class="input-container">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="input"
+                data-tipo="email"
+                required
+              />
+              <label class="input-label" for="email">Email</label>
+              <span class="input-message-error"></span>
+            </div>
+            <div class="input-container">
+              <input
+                type="text"
+                name="asunto"
+                id="asunto"
+                placeholder="asunto"
+                class="input"
+                pattern="^.{1,50}$"
+                data-tipo="asunto"
+                required
+              />
+              <label class="input-label" for="asunto">Asunto</label>
+              <span class="input-message-error"></span>
+            </div>
+            <div class="textarea-container">
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                rows="8"
+                class="textarea-input"
+                required
+                data-tipo="message"
+              ></textarea>
+              <label class="textarea-label" for="mensaje">Mensaje</label>
+              <span class="textarea-message-error"></span>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-form">
+            <i class="uil uil-message"></i>Enviar
+          </button>
         </form>
-    </section>
-</body>
-    <script src="script.js"></script>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footerclass">
+      <h2 class="footer__title">&copy; Jhon James Diaz Cardona</h2>
+
+      <ul class="hero__text__list">
+        <li class="hero__text__list__item">
+          <a
+            href="https://github.com/jhonjamesdc/"
+            class="hero__text__list__item__link"
+            target="_blank"
+          >
+            <i class="uil uil-github"></i>
+          </a>
+        </li>
+        <li class="hero__text__list__item">
+          <a
+            href="https://www.linkedin.com/in/jhon-james-d%C3%ADaz-cardona/"
+            class="hero__text__list__item__link"
+            target="_blank"
+          >
+            <i class="uil uil-linkedin"></i>
+          </a>
+        </li>
+        <li class="hero__text__list__item">
+          <a
+            href="https://www.instagram.com/jhonj.cardona/"
+            class="hero__text__list__item__link"
+            target="_blank"
+          >
+            <i class="uil uil-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="./js/styled.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
 </html>
